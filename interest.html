@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>interest</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" >
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script>
+        var srcArr = new Array("https://www.youtube.com/embed/KoApsGBl0hc?autoplay=1&controls=0","https://www.youtube.com/embed/aZ7PjDzyq10?autoplay=1&controls=0","https://www.youtube.com/embed/YJLYIuJP3_0?autoplay=1&controls=0","https://www.youtube.com/embed/s0kCnFiZPN4?autoplay=1&controls=0","https://www.youtube.com/embed/y4im66CVies?autoplay=1&controls=0","https://www.youtube.com/embed/mho9Wo6otjo?autoplay=1&controls=0");
+        function showImg() {
+            var $interest_video=$('#interest_video');
+            if($interest_video.hasClass('show')){
+                $interest_video.removeClass('show');
+                var src2 = $interest_video.attr('src').split('?');
+                $interest_video.attr('src',src2[0]);
+            }
+            else{
+                $interest_video.addClass('show');
+                var ori_src=$interest_video.attr('src');
+                $('#interest_video').attr('src',ori_src+'?autoplay=1&controls=0');
+            }
+        }
+        
+        var count = 0;
+
+        function nextImg(){
+            if(count != 5){
+                count++;
+            }
+            else{
+                count=0;
+            }
+            $('#interest_video').attr('src',srcArr[count]);
+        }
+        function prevImg(){
+            if(count != 0){
+                count--;
+            }
+            else{
+                count=5;
+            }
+            $('#interest_video').attr('src',srcArr[count]);
+
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+            <div class = "menu">
+                    <a href="./index.html"><p class="logo" alt="test" height="80px" width="300px">ChanC</p></a>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="./introduce.html">introduce</a></li>
+                            <li><a href="./interest.html">interest</a></li>
+                            <li><a href="./roadmap.html">roadmap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+    </header>
+    
+    <section class="wrapper">
+            <article class="article1">
+                    <div class="img_interest">
+                        <div class="content">
+                            <!-- <img src="./images/interest/드라마2.jpg" id="interest_img"> -->
+                            <iframe id="interest_video" src="https://www.youtube.com/embed/KoApsGBl0hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="nextImg" onclick="nextImg()"></div>
+                        <div class="prevImg" onclick="prevImg()"></div>
+                        <div class="power" onclick="showImg()"></div>
+                    </div>  
+                </article>
+
+    </section>
+    <footer>    
+        <p class="logo">ChanC</p>
+        <p>© 2019. <strong>ChanC</strong>. All rights reserved.</p>
+    </footer>
+</body>
+</html>

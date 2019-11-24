@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" >
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script type='text/javascript' src='./js/jquery.mousewheel.min.js'></script>
+    <script src="./js/myJs.js"></script>
+    <script>
+    var i = 0;
+    var txt = 'ChanC\'s homepage';
+    var speed = 200;
+
+    window.onload = function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("main-text").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    };
+    </script>
+</head>
+<body>
+        <header class="header">
+            <div class = "menu">
+                <a href="./index.html"><p class="logo" alt="test" height="80px" width="300px">ChanC</p></a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./introduce.html">introduce</a></li>
+                        <li><a href="./interest.html">interest</a></li>
+                        <li><a href="./roadmap.html">roadmap</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="wrapper">
+            <article class="article1">
+                <div class="img">
+                    <div class="content">
+                        <h1 id="main-text"></h1>
+                        <hr>
+                        <h3>유찬호의 개인페이지입니다.</h3>
+                    </div>
+                    <div class="arrow" onclick="move();"></div>
+                    <div class="img-cover" ></div>
+                </div>  
+            </article>
+            <article class="article2" id="article2">
+                <div class="title">
+                    <h1>Projects</h1>
+                </div>
+                <hr>
+                <div class="flex-box">
+                    <div class="flex left">
+                        <a href="https://github.com/r00tIsRoot/memorial"><img src="images/graduation_project.png" alt="test" width="100px" height="100px" class="circle-img"></a>
+                        <br><br>
+                        <div>
+                            <h2>졸업작품</h2>
+                            <h4>AR을 활용한 낙서장</h4>
+                        </div>
+                    </div>
+                    <div class="flex center">
+                        <a href="https://github.com/chanhO-Yoo/mini_project"><img src="images/java_project.png" alt="test" width="100px" height="100px" class="circle-img"></a>>
+                        <br><br>
+                        <div>
+                            <h2>JAVA 프로젝트</h2>
+                            <h4>커피숍 Kiosk</h4>
+                        </div>
+                    </div>
+                    <div class="flex right">
+                        <a href="https://github.com/chanhO-Yoo/web_project"></a><img src="images/web_project.png" alt="test" width="100px" height="100px" class="circle-img">
+                        <br><br>
+                        <div>
+                            <h2>HTML 프로젝트</h2>
+                            <h4>자기소개 페이지</h4>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="article_skills">
+                <div class="title">
+                    <h1>Skills</h1>
+                </div>
+                <hr>
+                <h3>Language</h3>
+                <div class="skill-box">
+                    <div class="icon">
+                        <div class="icon" id="C"></div>
+                        <div class="caption"><br>C<br><span>Basic</span></div>
+                    </div>
+                    <div class="icon">
+                        <div class="icon" id="Cpp"></div>
+                        <div class="caption"><br>C++<br><span>Basic</span></div>
+                    </div>
+                    <div class="icon">
+                        <div class="icon" id="Java"></div>
+                        <div class="caption"><br>Java<br><span>Basic</span></div>
+                    </div>
+                    <div class="icon">
+                        <div class="icon" id="Python"></div>
+                        <div class="caption"><br>Python<br><span>Basic</span></div>
+                    </div>
+                    <div class="icon">
+                        <div class="icon" id="Ruby"></div>
+                        <div class="caption"><br>Ruby<br><span>Basic</span></div>
+                    </div>
+                </div>
+                <h3>Web</h3>
+                <div class="skill-box">
+                    <div class="icon">
+                            <div class="icon" id="HTML5"></div>
+                            <div class="caption"><br>HTML5<br><span>Basic</span></div>
+                    </div>
+                    <div class="icon">
+                            <div class="icon" id="CSS3"></div>
+                            <div class="caption"><br>CSS3<br><span>Basic</span></div>
+                        </div>
+                        <div class="icon">
+                            <div class="icon" id="Javascript"></div>
+                            <div class="caption"><br>Javascript<br><span>Basic</span></div>
+                        </div>
+                        <div class="icon">
+                            <div class="icon" id="JQuery"></div>
+                            <div class="caption"><br>JQuery<br><span>Basic</span></div>
+                        </div>
+                    </div>
+                    <h3>Framework</h3>
+                    <div class="skill-box">
+                        <div class="icon">
+                            <div class="icon" id="NodeJs"></div>
+                            <div class="caption"><br>NodeJs<br><span>Basic</span></div>
+                        </div>
+                        <div class="icon">
+                            <div class="icon" id="RubyOnRails"></div>
+                            <div class="caption"><br>RoR<br><span>Basic</span></div>
+                        </div>
+                    </div>
+                    <h3>ETC</h3>
+                    <div class="skill-box">
+                        <div class="icon">
+                            <div class="icon" id="Android"></div>
+                            <div class="caption"><br>Android<br><span>Basic</span></div>
+                        </div>
+                        <div class="icon">
+                            <div class="icon" id="Oracle"></div>
+                            <div class="caption"><br>Oracle<br><span>Basic</span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="contact-me">
+                <h1>Contact Me</h1>
+                <hr>
+                <div class="form">
+                    <div class="profile">
+                        <img src="images/profile.jpg" alt="profile" height="240px" width="240px">
+                    </div>
+                    <form action="contact-us" class="contact-us">
+                        <input type="text" id="c_name" name="c_name" placeholder="Name">
+                        <input type="email" name="c_email" id="c_email" placeholder="E-mail">
+                        <input type="tel" name="c_tel" id="c_tel" placeholder="Phone">
+                        <textarea name="comments" id="comments" cols="50" rows="6" placeholder="Comment"></textarea>
+                        <input type="submit" value="submit" class="button">
+                    </form>
+                </div>
+            </article>
+        </section>
+        <footer>    
+            <p class="logo">ChanC</p>
+            <p>© 2019. <strong>ChanC</strong>. All rights reserved.</p>
+        </footer>
+    </body>
+
+</html>
